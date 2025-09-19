@@ -52,31 +52,31 @@ class P5_Amazon_Dataset(Dataset):
         print('Data sources: ', split.split(','))
         self.mode = mode
         if self.mode == 'train':
-            self.review_data = load_pickle(os.path.join('data', split, 'review_splits.pkl'))['train']
-            self.exp_data = load_pickle(os.path.join('data', split, 'exp_splits.pkl'))['train']
+            self.review_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'review_splits.pkl'))['train']
+            self.exp_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'exp_splits.pkl'))['train']
             if self.rating_augment:
-                self.rating_data = load_pickle(os.path.join('data', split, 'rating_splits_augmented.pkl'))['train']
+                self.rating_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'rating_splits_augmented.pkl'))['train']
             else:
                 self.rating_data = self.review_data
         elif self.mode == 'val':
-            self.review_data = load_pickle(os.path.join('data', split, 'review_splits.pkl'))['val']
-            self.exp_data = load_pickle(os.path.join('data', split, 'exp_splits.pkl'))['val']
+            self.review_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'review_splits.pkl'))['val']
+            self.exp_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'exp_splits.pkl'))['val']
             if self.rating_augment:
-                self.rating_data = load_pickle(os.path.join('data', split, 'rating_splits_augmented.pkl'))['val']
+                self.rating_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'rating_splits_augmented.pkl'))['val']
             else:
                 self.rating_data = self.review_data
         elif self.mode == 'test':
-            self.review_data = load_pickle(os.path.join('data', split, 'review_splits.pkl'))['test']
-            self.exp_data = load_pickle(os.path.join('data', split, 'exp_splits.pkl'))['test']
+            self.review_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'review_splits.pkl'))['test']
+            self.exp_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'exp_splits.pkl'))['test']
             if self.rating_augment:
-                self.rating_data = load_pickle(os.path.join('data', split, 'rating_splits_augmented.pkl'))['test']
+                self.rating_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'rating_splits_augmented.pkl'))['test']
             else:
                 self.rating_data = self.review_data
-            self.zeroshot_exp_data = load_pickle(os.path.join('data', 'beauty', 'zeroshot_exp_splits.pkl')) # change to dataset to be transferred (e.g., 'beauty')
+            self.zeroshot_exp_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', 'beauty', 'zeroshot_exp_splits.pkl')) # change to dataset to be transferred (e.g., 'beauty')
         else:
             raise NotImplementedError
             
-        self.sequential_data = ReadLineFromFile(os.path.join('data', split, 'sequential_data.txt'))
+        self.sequential_data = ReadLineFromFile(os.path.join('/scratch/jpa2742/P5/data', split, 'sequential_data.txt'))
         item_count = defaultdict(int)
         user_items = defaultdict()
 
@@ -95,19 +95,19 @@ class P5_Amazon_Dataset(Dataset):
         self.user_items = user_items
         
         if self.mode == 'test':
-            self.negative_samples = ReadLineFromFile(os.path.join('data', split, 'negative_samples.txt'))
+            self.negative_samples = ReadLineFromFile(os.path.join('/scratch/jpa2742/P5/data', split, 'negative_samples.txt'))
             
-        datamaps = load_json(os.path.join('data', split, 'datamaps.json'))
+        datamaps = load_json(os.path.join('/scratch/jpa2742/P5/data', split, 'datamaps.json'))
         self.user2id = datamaps['user2id']
         self.item2id = datamaps['item2id']
         self.user_list = list(datamaps['user2id'].keys())
         self.item_list = list(datamaps['item2id'].keys())
         self.id2item = datamaps['id2item']
         
-        self.user_id2name = load_pickle(os.path.join('data', split, 'user_id2name.pkl'))
+        self.user_id2name = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'user_id2name.pkl'))
         
         self.meta_data = []
-        for meta in parse(os.path.join('data', split, 'meta.json.gz')):
+        for meta in parse(os.path.join('/scratch/jpa2742/P5/data', split, 'meta.json.gz')):
             self.meta_data.append(meta)
         self.meta_dict = {}
         for i, meta_item in enumerate(self.meta_data):
@@ -949,30 +949,30 @@ class P5_Yelp_Dataset(Dataset):
         print('Data sources: ', split.split(','))
         self.mode = mode
         if self.mode == 'train':
-            self.review_data = load_pickle(os.path.join('data', split, 'review_splits.pkl'))['train']
-            self.exp_data = load_pickle(os.path.join('data', split, 'exp_splits.pkl'))['train']
+            self.review_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'review_splits.pkl'))['train']
+            self.exp_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'exp_splits.pkl'))['train']
             if self.rating_augment:
-                self.rating_data = load_pickle(os.path.join('data', split, 'rating_splits_augmented.pkl'))['train']
+                self.rating_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'rating_splits_augmented.pkl'))['train']
             else:
                 self.rating_data = self.review_data
         elif self.mode == 'val':
-            self.review_data = load_pickle(os.path.join('data', split, 'review_splits.pkl'))['val']
-            self.exp_data = load_pickle(os.path.join('data', split, 'exp_splits.pkl'))['val']
+            self.review_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'review_splits.pkl'))['val']
+            self.exp_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'exp_splits.pkl'))['val']
             if self.rating_augment:
-                self.rating_data = load_pickle(os.path.join('data', split, 'rating_splits_augmented.pkl'))['val']
+                self.rating_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'rating_splits_augmented.pkl'))['val']
             else:
                 self.rating_data = self.review_data
         elif self.mode == 'test':
-            self.review_data = load_pickle(os.path.join('data', split, 'review_splits.pkl'))['test']
-            self.exp_data = load_pickle(os.path.join('data', split, 'exp_splits.pkl'))['test']
+            self.review_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'review_splits.pkl'))['test']
+            self.exp_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'exp_splits.pkl'))['test']
             if self.rating_augment:
-                self.rating_data = load_pickle(os.path.join('data', split, 'rating_splits_augmented.pkl'))['test']
+                self.rating_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'rating_splits_augmented.pkl'))['test']
             else:
                 self.rating_data = self.review_data
         else:
             raise NotImplementedError
             
-        self.sequential_data = ReadLineFromFile(os.path.join('data', split, 'sequential_data.txt'))
+        self.sequential_data = ReadLineFromFile(os.path.join('/scratch/jpa2742/P5/data', split, 'sequential_data.txt'))
         item_count = defaultdict(int)
         user_items = defaultdict()
 
@@ -991,19 +991,19 @@ class P5_Yelp_Dataset(Dataset):
         self.user_items = user_items
         
         if self.mode == 'test':
-            self.negative_samples = ReadLineFromFile(os.path.join('data', split, 'negative_samples.txt'))
+            self.negative_samples = ReadLineFromFile(os.path.join('/scratch/jpa2742/P5/data', split, 'negative_samples.txt'))
             
-        datamaps = load_json(os.path.join('data', split, 'datamaps.json'))
+        datamaps = load_json(os.path.join('/scratch/jpa2742/P5/data', split, 'datamaps.json'))
         self.user2id = datamaps['user2id']
         self.item2id = datamaps['item2id']
         self.user_list = list(datamaps['user2id'].keys())
         self.item_list = list(datamaps['item2id'].keys())
         self.id2item = datamaps['id2item']
         
-        self.user_id2name = load_pickle(os.path.join('data', split, 'user_id2name.pkl'))
+        self.user_id2name = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'user_id2name.pkl'))
             
-        self.meta_data = load_pickle(os.path.join('data', split, 'meta_data.pkl'))
-        self.user_data = load_pickle(os.path.join('data', split, 'user_data.pkl'))
+        self.meta_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'meta_data.pkl'))
+        self.user_data = load_pickle(os.path.join('/scratch/jpa2742/P5/data', split, 'user_data.pkl'))
         self.meta_dict = {}
         for i, meta_item in enumerate(self.meta_data):
             self.meta_dict[meta_item['business_id']] = i
@@ -1742,44 +1742,427 @@ class P5_Yelp_Dataset(Dataset):
         return batch_entry
     
 
+class P5_ML1M_Dataset(Dataset):
+    def __init__(self, all_tasks_for_ml1m, task_list, tokenizer, args, sample_numbers, mode='train', split='ml1m', rating_augment=False, sample_type='random'): 
+        self.all_tasks = all_tasks_for_ml1m # This will be all_ml1m_templates.all_tasks
+        self.task_list = task_list
+        self.tokenizer = tokenizer
+        self.args = args
+        self.sample_numbers = sample_numbers
+        self.split_name = split # e.g., 'ml1m_p5_processed'
+        self.rating_augment = rating_augment # ML1M doesn't have explicit ratings that need augmentation like text-based ones
+        self.sample_type = sample_type # For negative sampling in sequential/traditional tasks
+        
+        data_root = os.path.join('/scratch/jpa2742/P5/data', self.split_name)
+        print(f'Data sources root: {data_root}')
+        self.mode = mode
+
+        # Load data based on mode
+        if self.mode == 'train':
+            self.rating_data = load_pickle(os.path.join(data_root, 'review_splits.pkl'))['train']
+            # ML1M doesn't have explicit explanations, so exp_data might be empty or not used for rating task
+            self.exp_data = load_pickle(os.path.join(data_root, 'exp_splits.pkl'))['train'] 
+        elif self.mode == 'val':
+            self.rating_data = load_pickle(os.path.join(data_root, 'review_splits.pkl'))['val']
+            self.exp_data = load_pickle(os.path.join(data_root, 'exp_splits.pkl'))['val']
+        elif self.mode == 'test':
+            self.rating_data = load_pickle(os.path.join(data_root, 'review_splits.pkl'))['test']
+            self.exp_data = load_pickle(os.path.join(data_root, 'exp_splits.pkl'))['test']
+        else:
+            raise NotImplementedError(f"Mode {self.mode} not implemented for ML1M dataset")
+            
+        # Sequential data (UserID ItemID1 ItemID2 ...)
+        self.sequential_data = ReadLineFromFile(os.path.join(data_root, 'sequential_data.txt'))
+        
+        # For negative sampling if sequential/traditional tasks are used
+        item_count = defaultdict(int)
+        self.user_items_for_neg_sampling = defaultdict(list) # Stores mapped item IDs per mapped user ID
+        for line in self.sequential_data:
+            parts = line.strip().split(' ', 1)
+            user = parts[0]
+            if len(parts) > 1:
+                items = parts[1].split(' ')
+                items = [item_id for item_id in items if item_id] # Filter out empty strings if any
+                self.user_items_for_neg_sampling[user].extend(items)
+                for item in items:
+                    item_count[item] += 1
+            
+        self.all_item_ids_for_neg_sampling = list(item_count.keys())
+        if not self.all_item_ids_for_neg_sampling: # Handle case where sequential_data might be empty
+             print("Warning: No items found for negative sampling. all_item_ids_for_neg_sampling is empty.")
+             self.probability_for_neg_sampling = []
+        else:
+            counts_for_prob = list(item_count.values())
+            sum_value = np.sum(counts_for_prob)
+            self.probability_for_neg_sampling = [value / sum_value for value in counts_for_prob] if sum_value > 0 else []
+
+        if self.mode == 'test':
+            self.negative_samples_file_content = ReadLineFromFile(os.path.join(data_root, 'negative_samples.txt'))
+            self.test_negative_samples = {}
+            for line in self.negative_samples_file_content:
+                parts = line.strip().split(' ', 1)
+                self.test_negative_samples[parts[0]] = parts[1].split(' ') if len(parts) > 1 else []
+            
+        datamaps = load_json(os.path.join(data_root, 'datamaps.json'))
+        self.user2id_raw = datamaps['user2id'] # raw_id -> mapped_id
+        self.item2id_raw = datamaps['item2id'] # raw_id -> mapped_id
+        self.id2user_mapped = datamaps['id2user'] # mapped_id -> raw_id
+        self.id2item_mapped = datamaps['id2item'] # mapped_id -> raw_id
+        
+        # This maps P5's mapped user ID to the original raw UserID string (which can serve as a 'name' or 'desc')
+        self.user_id_mapped_to_desc = load_pickle(os.path.join(data_root, 'user_id2name.pkl'))
+            
+        print('Computing datum_info for P5_ML1M_Dataset...')
+        self.total_length = 0
+        self.datum_info = [] # Stores tuples of (global_idx, task_group_key, original_data_idx_within_group, optional_task_specific_idx)
+        self.compute_datum_info()
+        print(f"Total number of samples for mode '{self.mode}': {self.total_length}")
+
+    def compute_datum_info(self):
+        curr = 0
+        for task_group_key in list(self.task_list.keys()): # e.g., 'rating', 'sequential'
+            if task_group_key == 'rating':
+                num_rating_data = len(self.rating_data)
+                if num_rating_data == 0: continue
+                self.total_length += num_rating_data * self.sample_numbers[task_group_key]
+                for i in range(num_rating_data * self.sample_numbers[task_group_key]):
+                    original_data_idx = i // self.sample_numbers[task_group_key]
+                    self.datum_info.append((curr + i, task_group_key, original_data_idx))
+                curr = self.total_length
+            # Add other task groups if you plan to use them for ML1M with P5
+            # For now, focusing on rating prediction.
+            # Minimal handling for other task types if they are in task_list but not primary.
+            elif task_group_key == 'sequential':
+                num_seq_data = len(self.sequential_data)
+                if num_seq_data == 0: continue
+                # sample_numbers['sequential'] is a tuple, e.g., (for_direct_pred, for_candidate_list, for_yes_no)
+                # For simplicity, we'll just use the first sample number if defined, or 1.
+                sampling_multiplier = self.sample_numbers[task_group_key][0] if isinstance(self.sample_numbers[task_group_key], tuple) else self.sample_numbers[task_group_key]
+                self.total_length += num_seq_data * sampling_multiplier
+                for i in range(num_seq_data * sampling_multiplier):
+                    original_data_idx = i // sampling_multiplier
+                    self.datum_info.append((curr + i, task_group_key, original_data_idx))
+                curr = self.total_length
+
+            elif task_group_key == 'explanation': # ML1M has no explanations
+                num_exp_data = len(self.exp_data) # Should be 0 for ML1M
+                if num_exp_data == 0: continue 
+                # This part likely won't run if exp_data is empty
+                self.total_length += num_exp_data * self.sample_numbers[task_group_key]
+                for i in range(num_exp_data * self.sample_numbers[task_group_key]):
+                    original_data_idx = i // self.sample_numbers[task_group_key]
+                    self.datum_info.append((curr + i, task_group_key, original_data_idx))
+                curr = self.total_length
+            
+            elif task_group_key == 'review': # ML1M has no textual reviews to summarize or predict rating from
+                # 'rating_data' is used for "review" task when it implies rating prediction from text.
+                # Here, we'll assume 'review' task refers to a different aspect if it's in task_list.
+                # If rating_data is used for this, it's redundant with the 'rating' task group.
+                # For now, let's assume it's minimal or not the focus.
+                num_review_data_for_task = len(self.rating_data) # Or some other source if defined
+                if num_review_data_for_task == 0 : continue
+                self.total_length += num_review_data_for_task * self.sample_numbers[task_group_key]
+                for i in range(num_review_data_for_task * self.sample_numbers[task_group_key]):
+                    original_data_idx = i // self.sample_numbers[task_group_key]
+                    self.datum_info.append((curr + i, task_group_key, original_data_idx)) # Use rating_data for this for now
+                curr = self.total_length
+
+            elif task_group_key == 'traditional':
+                # Traditional often means direct yes/no recommendation or ranking from candidates
+                num_users_for_trad = len(self.id2user_mapped) # Number of unique mapped users
+                if num_users_for_trad == 0: continue
+                # sample_numbers['traditional'] is a tuple, e.g., (for_yes_no, for_candidate_ranking)
+                sampling_multiplier_trad = self.sample_numbers[task_group_key][0] if isinstance(self.sample_numbers[task_group_key], tuple) else self.sample_numbers[task_group_key]
+                self.total_length += num_users_for_trad * sampling_multiplier_trad
+                for i in range(num_users_for_trad * sampling_multiplier_trad):
+                    original_user_idx = i // sampling_multiplier_trad # This will be an index into list(self.id2user_mapped.keys())
+                    self.datum_info.append((curr + i, task_group_key, original_user_idx))
+                curr = self.total_length
+            else:
+                print(f"Warning: Task group '{task_group_key}' not specifically handled for ML1M datum_info computation.")
+    
+    def __len__(self):
+        return self.total_length
+
+    def __getitem__(self, idx):
+        out_dict = {}
+        out_dict['args'] = self.args
+        loss_weight = 1.0
+
+        datum_info_entry = self.datum_info[idx]
+        task_group_key = datum_info_entry[1]
+        original_data_idx = datum_info_entry[2]
+        
+        source_text = ""
+        target_text = ""
+
+        if task_group_key == 'rating':            
+            rating_datum = self.rating_data[original_data_idx] # review_splits.pkl content
+            
+            # Choose a random prompt from the 'rating' task_list for ML1M
+            task_template_key = random.choice(self.task_list[task_group_key])
+            task_template = self.all_tasks['rating'][task_template_key]
+
+            mapped_user_id = rating_datum['reviewerID'] # Already mapped ID
+            mapped_item_id = rating_datum['asin']       # Already mapped ID
+            star_rating = rating_datum['overall']
+            item_title = rating_datum.get('title', "an unnamed movie") # Use .get for safety
+            user_desc = self.user_id_mapped_to_desc.get(mapped_user_id, mapped_user_id) # Raw UserID as desc
+
+            if task_template['id'] == '1-1':
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id)
+                target_text = task_template['target'].format(str(float(star_rating))) # P5 expects string target
+            elif task_template['id'] == '1-2':
+                source_text = task_template['source'].format(mapped_user_id, item_title) 
+                target_text = task_template['target'].format(str(float(star_rating)))
+            elif task_template['id'] == '1-3': # Yes/No for a given rating
+                rand_prob = random.random()
+                star_to_check = int(star_rating)
+                if rand_prob > 0.5: # True case
+                    target_ans = 'yes'
+                else: # False case: pick a different rating
+                    possible_ratings = [r for r in [1,2,3,4,5] if r != int(star_rating)]
+                    if not possible_ratings: possible_ratings = [1] # fallback
+                    star_to_check = random.choice(possible_ratings)
+                    target_ans = 'no'
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id, star_to_check)
+                target_text = task_template['target'].format(target_ans)
+            elif task_template['id'] == '1-4': # Like/Dislike
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id)
+                target_text = task_template['target'].format('like' if star_rating >= 4.0 else 'dislike')
+            elif task_template['id'] == '1-5':
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id, item_title)
+                target_text = task_template['target'].format(str(float(star_rating)))
+            elif task_template['id'] == '1-6':
+                source_text = task_template['source'].format(user_desc, mapped_item_id)
+                target_text = task_template['target'].format(str(float(star_rating)))
+            elif task_template['id'] == '1-7':
+                source_text = task_template['source'].format(user_desc, item_title)
+                target_text = task_template['target'].format(str(float(star_rating)))
+            else: # Fallback or if more templates are added
+                source_text = self.all_tasks['rating']['1-1']['source'].format(mapped_user_id, mapped_item_id)
+                target_text = self.all_tasks['rating']['1-1']['target'].format(str(float(star_rating)))
+                
+        elif task_group_key == 'diversity':
+            if task_template['id'] == '6-1':
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id)
+                target_text = task_template['target'].format(str(float(star_rating))) # P5 expects string target
+            elif task_template['id'] == '6-2':
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id)
+                target_text = task_template['target'].format('yes' if star_rating >= 6.0 else 'no')
+            elif task_template['id'] == '6-3':
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id)
+                target_text = task_template['target'].format(str(float(star_rating)))
+            elif task_template['id'] == '6-4':
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id)
+                target_text = task_template['target'].format('yes' if star_rating >= 6.0 else 'no')
+            elif task_template['id'] == '6-5':
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id, item_title)
+                target_text = task_template['target'].format(str(float(star_rating)))
+            elif task_template['id'] == '6-6':
+                source_text = task_template['source'].format(user_desc, mapped_item_id)
+                target_text = task_template['target'].format(str(float(star_rating)))
+            else: # Fallback or if more templates are added
+                source_text = task_template['source'].format(mapped_user_id, mapped_item_id)
+                target_text = task_template['target'].format('yes' if star_rating >= 6.0 else 'no')
+
+        # --- Add other task group handling if used for ML1M ---
+        # For now, primarily focusing on rating. Below are minimal placeholders.
+        elif task_group_key == 'sequential':
+            if not self.sequential_data or original_data_idx >= len(self.sequential_data): # Boundary check
+                # Fallback to a simple rating task if sequential data is problematic
+                return self[random.randint(0, len(self.datum_info) -1 )] # Retry with another random sample
+
+            seq_line = self.sequential_data[original_data_idx]
+            parts = seq_line.split(' ')
+            mapped_user_id = parts[0]
+            item_sequence = parts[1:]
+            
+            if len(item_sequence) < 2: # Need at least one history item and one target
+                 # Fallback if sequence too short
+                return self[random.randint(0, len(self.datum_info) -1 )]
+
+
+            # Simplified sequential task: predict last item from second to last
+            history_items = item_sequence[:-1]
+            target_item_id = item_sequence[-1]
+            
+            # Use the ML1M specific sequential prompt
+            task_template = self.all_tasks['sequential']['2-1-ml1m']
+            source_text = task_template['source'].format(mapped_user_id, " , ".join(history_items[-5:])) # Use last 5 items as history
+            target_text = task_template['target'].format(target_item_id)
+
+        elif task_group_key in ['explanation', 'review', 'traditional']:
+            # Since ML1M lacks rich data for these, we'll use a simple rating prompt as a fallback
+            # to ensure the dataloader always returns valid text data.
+            # This is a practical way to make the model train if these task keys are in args.losses
+            # but you primarily care about rating.
+            rating_datum = random.choice(self.rating_data) # Pick a random rating entry
+            task_template = self.all_tasks['rating']['1-1'] # Use a basic rating prompt
+
+            mapped_user_id = rating_datum['reviewerID']
+            mapped_item_id = rating_datum['asin']
+            star_rating = rating_datum['overall']
+            
+            source_text = task_template['source'].format(mapped_user_id, mapped_item_id)
+            target_text = task_template['target'].format(str(float(star_rating)))
+        else:
+            raise NotImplementedError(f"Task group {task_group_key} not implemented for ML1M.")
+
+        # Tokenization
+        input_ids = self.tokenizer.encode(
+                source_text, padding='max_length', truncation=True, max_length=self.args.max_text_length)
+        
+        # Define the local variable that holds the tokenized text
+        tokenized_text_local = self.tokenizer.tokenize(source_text) # Use a distinct local name
+        
+        # Pass this local variable to the method
+        whole_word_ids = self.calculate_whole_word_ids(tokenized_text_local) 
+        
+        target_ids = self.tokenizer.encode(
+                target_text, padding='max_length', truncation=True, max_length=self.args.gen_max_length)
+
+        out_dict['input_ids'] = torch.LongTensor(input_ids)
+        out_dict['input_length'] = len(input_ids) # Or sum(attention_mask)
+        out_dict['whole_word_ids'] = torch.LongTensor(whole_word_ids)
+        out_dict['target_ids'] = torch.LongTensor(target_ids)
+        out_dict['target_length'] = len(target_ids) # Or sum(attention_mask_for_target)
+
+        out_dict['source_text'] = source_text
+        # out_dict['tokenized_text'] = tokenized_text_for_wwi # Optional, for debugging
+        out_dict['target_text'] = target_text
+        out_dict['task'] = task_group_key # Store the main task group
+        out_dict['loss_weight'] = loss_weight
+
+        return out_dict
+    
+    def calculate_whole_word_ids(self, tokenized_text_list_arg): # Parameter name changed for clarity
+        ww_ids = []
+        curr = 0
+        # Use the passed argument name consistently
+        if not tokenized_text_list_arg: 
+            return [0] * self.args.max_text_length # Use 0 for padding whole word IDs
+
+        # Use the passed argument name consistently
+        for i in range(len(tokenized_text_list_arg)): 
+            if tokenized_text_list_arg[i].startswith(' ') or i == 0: 
+                curr += 1
+            # Ensure whole word IDs do not exceed the embedding table size (e.g., 511 for size 512)
+            ww_ids.append(min(curr, 511)) 
+        
+        # Pad to max_text_length, assuming the last whole_word_id (for EOS) should be 0
+        final_ww_ids = [0] * self.args.max_text_length 
+        
+        copy_len = min(len(ww_ids), self.args.max_text_length - 1) # Leave space for the EOS token's 0
+        final_ww_ids[:copy_len] = ww_ids[:copy_len]
+        # The last position (for EOS) will remain 0 due to initialization, which is typical for P5.
+                
+        return final_ww_ids
+
+    def collate_fn(self, batch):
+        # This collate_fn is mostly standard, adapted from P5's existing ones.
+        batch_entry = {}
+        B = len(batch)
+        args = self.args
+
+        # Determine max sequence lengths for padding in this batch
+        # Note: tokenizer.encode already pads to args.max_text_length, so S_W_L and T_W_L will be fixed.
+        S_W_L = self.args.max_text_length
+        T_W_L = self.args.gen_max_length
+
+        input_ids = torch.ones(B, S_W_L, dtype=torch.long) * self.tokenizer.pad_token_id
+        whole_word_ids = torch.zeros(B, S_W_L, dtype=torch.long) # Pad with 0 for whole_word_ids
+        target_ids = torch.ones(B, T_W_L, dtype=torch.long) * self.tokenizer.pad_token_id
+        loss_weights = torch.ones(B, dtype=torch.float)
+        tasks = []
+        source_texts = []
+        target_texts = []
+
+        for i, entry in enumerate(batch):
+            input_ids[i, :] = entry['input_ids'] # Assuming entry['input_ids'] is already padded/truncated
+            whole_word_ids[i, :] = entry['whole_word_ids'] # Assuming this is also correctly sized
+            target_ids[i, :] = entry['target_ids']
+
+            tasks.append(entry['task'])
+            source_texts.append(entry['source_text'])
+            target_texts.append(entry['target_text'])
+            loss_weights[i] = entry['loss_weight']
+
+        # For T5, labels not equal to pad_token_id are considered, others are set to -100
+        target_ids[target_ids == self.tokenizer.pad_token_id] = -100
+        
+        batch_entry['task'] = tasks
+        batch_entry['source_text'] = source_texts
+        batch_entry['target_text'] = target_texts
+        batch_entry['input_ids'] = input_ids
+        batch_entry['whole_word_ids'] = whole_word_ids
+        batch_entry['target_ids'] = target_ids
+        batch_entry['loss_weights'] = loss_weights
+        return batch_entry
+
+
+# Modify the main get_loader function to include ML1M
 def get_loader(args, task_list, sample_numbers, split='toys', mode='train', 
-               batch_size=16, workers=4, distributed=False):
+               batch_size=16, workers=4, distributed=False,
+               all_tasks_templates_override=None): # Added for flexibility
 
     if 't5' in args.backbone:
+        # Use the P5Tokenizer from the src directory
         tokenizer = P5Tokenizer.from_pretrained(
             args.backbone, 
             max_length=args.max_text_length, 
-            do_lower_case=args.do_lower_case)
-
-    if split == 'yelp':
-        from all_yelp_templates import all_tasks as task_templates
-        
-        dataset = P5_Yelp_Dataset(
-            task_templates,
-            task_list,
-            tokenizer,
-            args,
-            sample_numbers,
-            mode=mode,
-            split=split,
-            rating_augment=False
+            do_lower_case=args.do_lower_case
         )
     else:
-        from all_amazon_templates import all_tasks as task_templates
+        # Fallback or raise error if backbone not T5 based
+        raise ValueError(f"Unsupported backbone: {args.backbone} for P5Tokenizer")
 
-        dataset = P5_Amazon_Dataset(
+    if split == 'ml1m': 
+        import all_ml1m_templates # Corrected import
+        task_templates = all_ml1m_templates.all_tasks
+        dataset = P5_ML1M_Dataset(
             task_templates,
             task_list,
             tokenizer,
             args,
             sample_numbers,
             mode=mode,
-            split=split,
+            split=split, 
             rating_augment=False
         )
+    elif split == 'yelp':
+        import all_yelp_templates # Corrected import
+        task_templates = all_yelp_templates.all_tasks
+        # Assuming P5_Yelp_Dataset is defined in this file or imported correctly
+        # For this example, using a placeholder if not defined
+        try:
+            dataset = P5_Yelp_Dataset( 
+                task_templates, task_list, tokenizer, args, sample_numbers,
+                mode=mode, split=split, rating_augment=args.rating_augment
+            )
+        except NameError: # If P5_Yelp_Dataset isn't defined in this scope
+             dataset = P5_Yelp_Dataset_Placeholder(
+                task_templates, task_list, tokenizer, args, sample_numbers,
+                mode=mode, split=split, rating_augment=args.rating_augment
+            )
+    elif split in ['beauty', 'toys', 'sports']: 
+        import all_amazon_templates # Corrected import
+        task_templates = all_amazon_templates.all_tasks
+        try:
+            dataset = P5_Amazon_Dataset( 
+                task_templates, task_list, tokenizer, args, sample_numbers,
+                mode=mode, split=split, rating_augment=args.rating_augment
+            )
+        except NameError: # If P5_Amazon_Dataset isn't defined in this scope
+             dataset = P5_Amazon_Dataset_Placeholder(
+                task_templates, task_list, tokenizer, args, sample_numbers,
+                mode=mode, split=split, rating_augment=args.rating_augment
+            )
+    else:
+        raise ValueError(f"Unknown dataset split: {split}")
 
     if distributed:
-        sampler = DistributedSampler(dataset)
+        sampler = DistributedSampler(dataset, shuffle=(mode == 'train'))
     else:
         sampler = None
 
@@ -1788,14 +2171,28 @@ def get_loader(args, task_list, sample_numbers, split='toys', mode='train',
             dataset, batch_size=batch_size, shuffle=(sampler is None),
             num_workers=workers, pin_memory=True, sampler=sampler,
             collate_fn=dataset.collate_fn)
-    else:
+    else: 
         loader = DataLoader(
             dataset,
             batch_size=batch_size,
             num_workers=workers, pin_memory=True,
             sampler=sampler,
-            shuffle=None if (sampler is not None) else False,
+            shuffle=False, 
             collate_fn=dataset.collate_fn,
             drop_last=False)
         
     return loader
+
+# Placeholder for Yelp/Amazon datasets if you copy this file and they are not defined
+# If they are, these placeholders are not needed.
+class P5_Yelp_Dataset_Placeholder(Dataset): 
+    def __init__(self, *args, **kwargs): print("Note: Using Placeholder for P5_Yelp_Dataset in pretrain_data.py"); self.data = []
+    def __len__(self): return len(self.data)
+    def __getitem__(self, idx): return self.data[idx] if self.data else {} # Ensure it returns a dict
+    def collate_fn(self, batch): return {} if not batch else batch[0] 
+
+class P5_Amazon_Dataset_Placeholder(Dataset): 
+    def __init__(self, *args, **kwargs): print("Note: Using Placeholder for P5_Amazon_Dataset in pretrain_data.py"); self.data = []
+    def __len__(self): return len(self.data)
+    def __getitem__(self, idx): return self.data[idx] if self.data else {} # Ensure it returns a dict
+    def collate_fn(self, batch): return {} if not batch else batch[0]

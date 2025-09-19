@@ -1,0 +1,533 @@
+[datamaps] item2id loaded: 11888 from /scratch/jpa2742/P5/data/datamaps_64.json
+[svd] V=(11888, 64), items=11888, mu=7.290, reg=0.05
+[datamaps] roundtrip OK on sample
+[p5] checkpoint cached from /scratch/jpa2742/P5/snap/Epoch10_64.pth
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 227 (csv_space=external) ===
+
+=== user 227 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 2.0 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 311 (csv_space=external) ===
+
+=== user 311 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.9 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 635 (csv_space=external) ===
+
+=== user 635 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.7 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 703 (csv_space=external) ===
+
+=== user 703 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 1652 (csv_space=external) ===
+
+=== user 1652 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 1850 (csv_space=external) ===
+
+=== user 1850 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.5 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 2936 (csv_space=external) ===
+
+=== user 2936 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 3001 (csv_space=external) ===
+
+=== user 3001 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 3085 (csv_space=external) ===
+
+=== user 3085 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 3236 (csv_space=external) ===
+
+=== user 3236 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 3406 (csv_space=external) ===
+
+=== user 3406 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 4500 (csv_space=external) ===
+
+=== user 4500 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.5 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 4751 (csv_space=external) ===
+
+=== user 4751 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 5573 (csv_space=external) ===
+
+=== user 5573 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 5612 (csv_space=external) ===
+
+=== user 5612 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 5908 (csv_space=external) ===
+
+=== user 5908 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 6331 (csv_space=external) ===
+
+=== user 6331 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 6938 (csv_space=external) ===
+
+=== user 6938 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 6983 (csv_space=external) ===
+
+=== user 6983 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 7460 (csv_space=external) ===
+
+=== user 7460 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 7617 (csv_space=external) ===
+
+=== user 7617 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 7946 (csv_space=external) ===
+
+=== user 7946 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 7965 (csv_space=external) ===
+
+=== user 7965 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 8196 (csv_space=external) ===
+
+=== user 8196 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.5 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 9161 (csv_space=external) ===
+
+=== user 9161 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 9261 (csv_space=external) ===
+
+=== user 9261 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 9355 (csv_space=external) ===
+
+=== user 9355 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 9917 (csv_space=external) ===
+
+=== user 9917 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 10207 (csv_space=external) ===
+
+=== user 10207 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 10707 (csv_space=external) ===
+
+=== user 10707 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 11478 (csv_space=external) ===
+
+=== user 11478 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 11625 (csv_space=external) ===
+
+=== user 11625 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 11948 (csv_space=external) ===
+
+=== user 11948 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 12705 (csv_space=external) ===
+
+=== user 12705 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 12756 (csv_space=external) ===
+
+=== user 12756 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 12810 (csv_space=external) ===
+
+=== user 12810 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.5 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 12838 (csv_space=external) ===
+
+=== user 12838 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 12919 (csv_space=external) ===
+
+=== user 12919 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 13215 (csv_space=external) ===
+
+=== user 13215 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 13401 (csv_space=external) ===
+
+=== user 13401 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 13731 (csv_space=external) ===
+
+=== user 13731 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 14442 (csv_space=external) ===
+
+=== user 14442 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 15094 (csv_space=external) ===
+
+=== user 15094 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 15296 (csv_space=external) ===
+
+=== user 15296 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 15709 (csv_space=external) ===
+
+=== user 15709 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 15785 (csv_space=external) ===
+
+=== user 15785 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 16074 (csv_space=external) ===
+
+=== user 16074 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 16291 (csv_space=external) ===
+
+=== user 16291 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.5 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 16344 (csv_space=external) ===
+
+=== user 16344 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 16640 (csv_space=external) ===
+
+=== user 16640 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 16723 (csv_space=external) ===
+
+=== user 16723 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 16764 (csv_space=external) ===
+
+=== user 16764 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 17389 (csv_space=external) ===
+
+=== user 17389 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 17629 (csv_space=external) ===
+
+=== user 17629 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 17703 (csv_space=external) ===
+
+=== user 17703 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 17895 (csv_space=external) ===
+
+=== user 17895 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 18009 (csv_space=external) ===
+
+=== user 18009 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 18498 (csv_space=external) ===
+
+=== user 18498 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 18739 (csv_space=external) ===
+
+=== user 18739 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 18819 (csv_space=external) ===
+
+=== user 18819 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 19600 (csv_space=external) ===
+
+=== user 19600 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 19607 (csv_space=external) ===
+
+=== user 19607 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 19956 (csv_space=external) ===
+
+=== user 19956 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+[datamaps] history coverage: 0.0% (0/0)
+
+=== user 21832 (csv_space=external) ===
+
+=== user 21832 ===
+[datamaps] top100 coverage: 72.0% (72/100)
+[datamaps] top100 unmapped sample (top 10): ['75314', '102926', '114369', '118715', '120737', '208092', '358273', '477348', '790636', '267626']
+  SVD: 1.6 ms | P5 In-Prompt: 0.0 ms | P5 Soft-Prompt: 0.0 ms
+
+=== RUNTIME SUMMARY (per user) ===
+          svd_ms  p5_inprompt_ms  p5_softprompt_ms
+count  64.000000       64.000000         64.000000
+mean    1.585964        0.000138          0.000112
+std     0.066349        0.000055          0.000015
+min     1.540374        0.000100          0.000090
+25%     1.562026        0.000120          0.000100
+50%     1.572496        0.000130          0.000110
+75%     1.584119        0.000140          0.000120
+max     1.983290        0.000540          0.000160
+
+=== FINAL METRICS (LOO over users) ===
+In-Prompt : insufficient pairs
+Soft-Prompt: insufficient pairs
+[saved] timings -> test_softprompt_result_times.csv
+[saved] tops    -> test_softprompt_result_tops.csv

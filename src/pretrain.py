@@ -421,6 +421,44 @@ if __name__ == "__main__":
     dsets = []
     if 'toys' in args.train:
         dsets.append('toys')
+    if args.train == 'ml1m': 
+        print(f"Configuring task lists for ML1M dataset: {args.train}")
+        train_task_list = {
+            'rating': ['1-1', '1-2', '1-3', '1-4', '1-5', '1-6', '1-7', '1-8', '1-9', '1-10'],
+            'sequential': ['2-1-ml1m'],
+            'explanation': ['3-1-ml1m'] if 'explanation' in args.losses.split(',') else [],
+            'review': ['4-1-ml1m'] if 'review' in args.losses.split(',') else [],
+            'traditional': ['5-1-ml1m'] if 'traditional' in args.losses.split(',') else []
+        }
+        train_task_list = {k: v for k, v in train_task_list.items() if v} # Remove empty task lists
+
+        train_sample_numbers = {
+            'rating': 5, 
+            'sequential': (1,0,0), # P5_ML1M_Dataset now uses the first element for sequential sampling multiplier
+            'explanation': 0, 
+            'review': 0,      
+            'traditional': (1,0) # P5_ML1M_Dataset now uses the first element for traditional sampling multiplier
+        }
+        
+        val_task_list = train_task_list.copy() 
+        val_sample_numbers = {k: 1 for k, v_list in train_task_list.items() if v_list} # Initialize with 1 if task list is not empty
+
+        # Adjust for tasks that should have 0 samples or specific tuple structures for validation
+        if 'explanation' in val_sample_numbers: val_sample_numbers['explanation'] = 0
+        if 'review' in val_sample_numbers: val_sample_numbers['review'] = 0
+        
+        # Corrected logic: Check against train_sample_numbers (the source structure) or val_sample_numbers
+        if 'sequential' in val_sample_numbers and isinstance(train_sample_numbers.get('sequential'), tuple): 
+            val_sample_numbers['sequential'] = (1,0,0) # Set validation sampling for sequential (direct pred, candidates, yes/no)
+        elif 'sequential' in val_sample_numbers: # If not tuple in train_sample_numbers, just set to 1
+             val_sample_numbers['sequential'] = 1
+
+
+        if 'traditional' in val_sample_numbers and isinstance(train_sample_numbers.get('traditional'), tuple): 
+            val_sample_numbers['traditional'] = (1,0) # Set validation sampling for traditional (yes/no, candidates)
+        elif 'traditional' in val_sample_numbers: # If not tuple
+             val_sample_numbers['traditional'] = 1
+
     if 'beauty' in args.train:
         dsets.append('beauty')
     if 'sports' in args.train:

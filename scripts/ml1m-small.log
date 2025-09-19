@@ -1,0 +1,351 @@
+Configurations
+{'adam_beta1': 0.9,
+ 'adam_beta2': 0.999,
+ 'adam_eps': 1e-06,
+ 'backbone': 't5-small',
+ 'batch_size': 16,
+ 'clip_grad_norm': 1.0,
+ 'comment': '',
+ 'distributed': True,
+ 'do_lower_case': False,
+ 'dropout': 0.1,
+ 'dry': False,
+ 'epoch': 10,
+ 'fp16': False,
+ 'from_scratch': False,
+ 'gen_max_length': 64,
+ 'gradient_accumulation_steps': 1,
+ 'load': None,
+ 'local_rank': 0,
+ 'log_train_accuracy': False,
+ 'losses': 'rating,sequential,explanation,review,traditional',
+ 'lr': 0.001,
+ 'max_text_length': 512,
+ 'multiGPU': True,
+ 'num_beams': 1,
+ 'num_workers': 4,
+ 'optim': 'adamw',
+ 'optimizer': 'adamw',
+ 'output': 'snap/ml1m-small',
+ 'seed': 2022,
+ 'submit': False,
+ 'test': None,
+ 'test_only': False,
+ 'tokenizer': 'p5',
+ 'train': 'ml1m',
+ 'valid': 'ml1m',
+ 'valid_batch_size': None,
+ 'warmup_ratio': 0.02,
+ 'weight_decay': 0.01,
+ 'whole_word_embed': True}
+Configuring task lists for ML1M dataset: ml1m
+Process Launching at GPU 3
+Configuring task lists for ML1M dataset: ml1m
+Process Launching at GPU 1
+['rating_loss', 'sequential_loss', 'explanation_loss', 'review_loss', 'traditional_loss']
+Configuring task lists for ML1M dataset: ml1m
+Process Launching at GPU 0
+Configuring task lists for ML1M dataset: ml1m
+Process Launching at GPU 2
+Building train loader at GPU 0
+Building train loader at GPU 2
+Building train loader at GPU 1Building train loader at GPU 3
+
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Total number of samples for mode 'train': 1635740
+Building val loader at GPU 3
+Total number of samples for mode 'train': 1635740
+Building val loader at GPU 2
+Total number of samples for mode 'train': 1635740
+Building val loader at GPU 1
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Total number of samples for mode 'train': 1635740
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Building val loader at GPU 0
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Total number of samples for mode 'val': 207396
+Total number of samples for mode 'val': 207396
+Computing datum_info for P5_ML1M_Dataset...
+Total number of samples for mode 'val': 207396
+Building Model at GPU 3
+Building Model at GPU 2
+Total number of samples for mode 'val': 207396
+Building Model at GPU 1
+Building Model at GPU 0
+Model Launching at GPU 3
+Model Launching at GPU 2
+Model Launching at GPU 1
+Model Launching at GPU 0
+Building Optimizer
+Batch per epoch: 25559
+Total Iters: 255590
+Warmup ratio: 0.02
+Warm up Iters: 5111
+hyper-01-prod-comp-di-0241-245:262727:262727 [0] NCCL INFO Bootstrap : Using enp135s0:10.66.241.245<0>
+hyper-01-prod-comp-di-0241-245:262727:262727 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+hyper-01-prod-comp-di-0241-245:262727:262727 [0] NCCL INFO NET/IB : No device found.
+hyper-01-prod-comp-di-0241-245:262727:262727 [0] NCCL INFO NET/Socket : Using [0]enp135s0:10.66.241.245<0>
+hyper-01-prod-comp-di-0241-245:262727:262727 [0] NCCL INFO Using network Socket
+NCCL version 2.10.3+cuda11.3
+hyper-01-prod-comp-di-0241-245:262729:262729 [2] NCCL INFO Bootstrap : Using enp135s0:10.66.241.245<0>
+hyper-01-prod-comp-di-0241-245:262730:262730 [3] NCCL INFO Bootstrap : Using enp135s0:10.66.241.245<0>
+hyper-01-prod-comp-di-0241-245:262730:262730 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+hyper-01-prod-comp-di-0241-245:262728:262728 [1] NCCL INFO Bootstrap : Using enp135s0:10.66.241.245<0>
+hyper-01-prod-comp-di-0241-245:262729:262729 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+hyper-01-prod-comp-di-0241-245:262728:262728 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+hyper-01-prod-comp-di-0241-245:262730:262730 [3] NCCL INFO NET/IB : No device found.
+hyper-01-prod-comp-di-0241-245:262729:262729 [2] NCCL INFO NET/IB : No device found.
+hyper-01-prod-comp-di-0241-245:262728:262728 [1] NCCL INFO NET/IB : No device found.
+hyper-01-prod-comp-di-0241-245:262730:262730 [3] NCCL INFO NET/Socket : Using [0]enp135s0:10.66.241.245<0>
+hyper-01-prod-comp-di-0241-245:262730:262730 [3] NCCL INFO Using network Socket
+hyper-01-prod-comp-di-0241-245:262729:262729 [2] NCCL INFO NET/Socket : Using [0]enp135s0:10.66.241.245<0>
+hyper-01-prod-comp-di-0241-245:262729:262729 [2] NCCL INFO Using network Socket
+hyper-01-prod-comp-di-0241-245:262728:262728 [1] NCCL INFO NET/Socket : Using [0]enp135s0:10.66.241.245<0>
+hyper-01-prod-comp-di-0241-245:262728:262728 [1] NCCL INFO Using network Socket
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Channel 00/02 :    0   1   2   3
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Channel 01/02 :    0   1   2   3
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Channel 00 : 0[9f000] -> 1[a1000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Channel 00 : 1[a1000] -> 2[a3000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Channel 01 : 0[9f000] -> 1[a1000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Channel 01 : 1[a1000] -> 2[a3000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Channel 00 : 3[a5000] -> 0[9f000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Channel 01 : 3[a5000] -> 0[9f000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Channel 00 : 2[a3000] -> 3[a5000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Channel 01 : 2[a3000] -> 3[a5000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Connected all rings
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Connected all rings
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Connected all rings
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Connected all rings
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Channel 00 : 3[a5000] -> 2[a3000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Channel 01 : 3[a5000] -> 2[a3000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Channel 00 : 1[a1000] -> 0[9f000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Channel 01 : 1[a1000] -> 0[9f000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Channel 00 : 2[a3000] -> 1[a1000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Channel 01 : 2[a3000] -> 1[a1000] via direct shared memory
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO Connected all trees
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO Connected all trees
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO Connected all trees
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO Connected all trees
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+hyper-01-prod-comp-di-0241-245:262730:274908 [3] NCCL INFO comm 0x7fcc600030d0 rank 3 nranks 4 cudaDev 3 busId a5000 - Init COMPLETE
+hyper-01-prod-comp-di-0241-245:262728:274911 [1] NCCL INFO comm 0x7f2b140030d0 rank 1 nranks 4 cudaDev 1 busId a1000 - Init COMPLETE
+hyper-01-prod-comp-di-0241-245:262727:274792 [0] NCCL INFO comm 0x7fefd80030d0 rank 0 nranks 4 cudaDev 0 busId 9f000 - Init COMPLETE
+hyper-01-prod-comp-di-0241-245:262729:274905 [2] NCCL INFO comm 0x7f382c0030d0 rank 2 nranks 4 cudaDev 2 busId a3000 - Init COMPLETE
+hyper-01-prod-comp-di-0241-245:262727:262727 [0] NCCL INFO Launch mode Parallel
+It took 13.0s
+Train Loss: 0.785
+rating_loss (642220): 0.560 review_loss (642220): 0.671 sequential_loss (117100): 2.870 total_loss (1635740): 0.785 traditional_loss (234200): 0.672 
+
+Skip validation for Epoch01
+Skip validation for Epoch01
+Skip validation for Epoch01
+Skip validation for Epoch01
+Train Loss: 0.732
+rating_loss (642220): 0.512 review_loss (642220): 0.629 sequential_loss (117100): 2.707 total_loss (1635740): 0.732 traditional_loss (234200): 0.630 
+
+Skip validation for Epoch02
+Skip validation for Epoch02
+Skip validation for Epoch02
+Skip validation for Epoch02
+Train Loss: 0.722
+rating_loss (642220): 0.507 review_loss (642220): 0.623 sequential_loss (117100): 2.647 total_loss (1635740): 0.722 traditional_loss (234200): 0.623 
+
+Skip validation for Epoch03
+Skip validation for Epoch03
+Skip validation for Epoch03
+Skip validation for Epoch03
+Train Loss: 0.716
+rating_loss (642220): 0.503 review_loss (642220): 0.619 sequential_loss (117100): 2.604 total_loss (1635740): 0.716 traditional_loss (234200): 0.618 
+
+Skip validation for Epoch04
+Skip validation for Epoch04
+Skip validation for Epoch04
+Skip validation for Epoch04
+Train Loss: 0.709
+rating_loss (642220): 0.500 review_loss (642220): 0.614 sequential_loss (117100): 2.564 total_loss (1635740): 0.709 traditional_loss (234200): 0.614 
+
+Skip validation for Epoch05
+Skip validation for Epoch05
+Skip validation for Epoch05
+Skip validation for Epoch05
+Train Loss: 0.701
+rating_loss (642220): 0.496 review_loss (642220): 0.608 sequential_loss (117100): 2.523 total_loss (1635740): 0.701 traditional_loss (234200): 0.609 
+
+Skip validation for Epoch06
+Skip validation for Epoch06
+Skip validation for Epoch06
+Skip validation for Epoch06
+Train Loss: 0.695
+rating_loss (642220): 0.492 review_loss (642220): 0.605 sequential_loss (117100): 2.480 total_loss (1635740): 0.695 traditional_loss (234200): 0.605 
+
+Skip validation for Epoch07
+Skip validation for Epoch07
+Skip validation for Epoch07
+Skip validation for Epoch07
+Train Loss: 0.688
+rating_loss (642220): 0.489 review_loss (642220): 0.600 sequential_loss (117100): 2.436 total_loss (1635740): 0.688 traditional_loss (234200): 0.599 
+
+Skip validation for Epoch08
+Skip validation for Epoch08
+Skip validation for Epoch08
+Skip validation for Epoch08
+Train Loss: 0.679
+rating_loss (642220): 0.485 review_loss (642220): 0.593 sequential_loss (117100): 2.388 total_loss (1635740): 0.679 traditional_loss (234200): 0.594 
+
+Skip validation for Epoch09
+Skip validation for Epoch09
+Skip validation for Epoch09
+Skip validation for Epoch09
+Train Loss: 0.673
+rating_loss (642220): 0.482 review_loss (642220): 0.590 sequential_loss (117100): 2.344 total_loss (1635740): 0.673 traditional_loss (234200): 0.589 
+
+Skip validation for Epoch10Skip validation for Epoch10
+
+Skip validation for Epoch10
+Skip validation for Epoch10

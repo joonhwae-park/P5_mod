@@ -120,7 +120,8 @@ class JointEncoder(T5Stack):
                     encoder_hidden_states=None,
                     encoder_attention_mask=None,
                     encoder_decoder_position_bias=None,
-                    head_mask=head_mask[i],
+                    layer_head_mask=head_mask[i], # For trasnformers 4.36.2
+                    #head_mask=head_mask[i],  # For transformers 4.2.1
                     past_key_value=past_key_value,
                     use_cache=use_cache,
                     output_attentions=output_attentions,
@@ -128,17 +129,23 @@ class JointEncoder(T5Stack):
                 
                 # layer_outputs is a tuple with:
                 # hidden-states, key-value-states, (self-attention weights), (self-attention position bias), (cross-attention weights), (cross-attention position bias)
-                hidden_states, present_key_value_state = layer_outputs[:2]
+                ##hidden_states, present_key_value_state = layer_outputs[:2] # For transformers 4.2.1
 
                 # We share the position biases between the layers - the first layer store them
                 # layer_outputs = hidden-states, key-value-states (self-attention weights),
                 # (self-attention position bias), (cross-attention weights), (cross-attention position bias)
-                position_bias = layer_outputs[2]
-
+                ##position_bias = layer_outputs[2] # For transformers 4.2.1
+                
+                hidden_states = layer_outputs[0]
+                #present_key_value_state = layer_outputs[1] if (use_cache and len(layer_outputs) > 1) else None
+                
+                position_bias = layer_outputs[-1]
+                
                 # append next layer key value states
                 if use_cache:
-                    present_key_value_states = present_key_value_states + \
-                        (present_key_value_state,)
+                     present_key_value_state = layer_outputs[-2]
+                     present_key_value_states = present_key_value_states + \
+                         (present_key_value_state,)
 
         hidden_states = self.final_layer_norm(hidden_states)
         hidden_states = self.dropout(hidden_states)

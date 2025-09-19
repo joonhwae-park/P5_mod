@@ -1,0 +1,582 @@
+Configurations
+{'adam_beta1': 0.9,
+ 'adam_beta2': 0.999,
+ 'adam_eps': 1e-06,
+ 'backbone': 't5-small',
+ 'batch_size': 16,
+ 'clip_grad_norm': 1.0,
+ 'comment': '',
+ 'distributed': True,
+ 'do_lower_case': False,
+ 'dropout': 0.1,
+ 'dry': False,
+ 'epoch': 10,
+ 'fp16': False,
+ 'from_scratch': False,
+ 'gen_max_length': 64,
+ 'gradient_accumulation_steps': 1,
+ 'load': None,
+ 'local_rank': 0,
+ 'log_train_accuracy': False,
+ 'losses': 'rating,sequential,explanation,review,traditional',
+ 'lr': 0.001,
+ 'max_text_length': 512,
+ 'multiGPU': True,
+ 'num_beams': 1,
+ 'num_workers': 4,
+ 'optim': 'adamw',
+ 'optimizer': 'adamw',
+ 'output': 'snap/ml1m_aug_64-small',
+ 'seed': 2022,
+ 'submit': False,
+ 'test': None,
+ 'test_only': False,
+ 'tokenizer': 'p5',
+ 'train': 'ml1m',
+ 'valid': 'ml1m',
+ 'valid_batch_size': None,
+ 'warmup_ratio': 0.02,
+ 'weight_decay': 0.01,
+ 'whole_word_embed': True}
+Configuring task lists for ML1M dataset: ml1m
+Process Launching at GPU 3
+Configuring task lists for ML1M dataset: ml1m
+Process Launching at GPU 1
+['rating_loss', 'sequential_loss', 'explanation_loss', 'review_loss', 'traditional_loss']
+Configuring task lists for ML1M dataset: ml1m
+Process Launching at GPU 0
+Configuring task lists for ML1M dataset: ml1m
+Process Launching at GPU 2
+Building train loader at GPU 3
+Building train loader at GPU 1
+Building train loader at GPU 2
+Building train loader at GPU 0
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Total number of samples for mode 'train': 2914910
+Total number of samples for mode 'train': 2914910
+Building val loader at GPU 2
+Building val loader at GPU 3
+Total number of samples for mode 'train': 2914910
+Building val loader at GPU 0
+Total number of samples for mode 'train': 2914910
+Building val loader at GPU 1
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Data sources root: /scratch/jpa2742/P5/data/ml1m
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Computing datum_info for P5_ML1M_Dataset...
+Total number of samples for mode 'val': 367256
+Total number of samples for mode 'val': 367256
+Total number of samples for mode 'val': 367256
+Computing datum_info for P5_ML1M_Dataset...
+Total number of samples for mode 'val': 367256
+Building Model at GPU 1
+Building Model at GPU 3
+Building Model at GPU 2
+Building Model at GPU 0
+Model Launching at GPU 0
+Model Launching at GPU 3
+Model Launching at GPU 1
+Model Launching at GPU 2
+Building Optimizer
+Batch per epoch: 45546
+Total Iters: 455460
+Warmup ratio: 0.02
+Warm up Iters: 9109
+hyper-01-prod-comp-di-0241-139:40895:40895 [0] NCCL INFO Bootstrap : Using enp135s0:10.66.241.139<0>
+hyper-01-prod-comp-di-0241-139:40895:40895 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+hyper-01-prod-comp-di-0241-139:40895:40895 [0] NCCL INFO cudaDriverVersion 12020
+NCCL version 2.14.3+cuda11.7
+hyper-01-prod-comp-di-0241-139:40896:40896 [1] NCCL INFO cudaDriverVersion 12020
+hyper-01-prod-comp-di-0241-139:40896:40896 [1] NCCL INFO Bootstrap : Using enp135s0:10.66.241.139<0>
+hyper-01-prod-comp-di-0241-139:40896:40896 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+hyper-01-prod-comp-di-0241-139:40898:40898 [3] NCCL INFO cudaDriverVersion 12020
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO NET/IB : No device found.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO NET/Socket : Using [0]enp135s0:10.66.241.139<0>
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Using network Socket
+hyper-01-prod-comp-di-0241-139:40898:40898 [3] NCCL INFO Bootstrap : Using enp135s0:10.66.241.139<0>
+hyper-01-prod-comp-di-0241-139:40898:40898 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO NET/IB : No device found.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO NET/Socket : Using [0]enp135s0:10.66.241.139<0>
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Using network Socket
+hyper-01-prod-comp-di-0241-139:40897:40897 [2] NCCL INFO cudaDriverVersion 12020
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO NET/IB : No device found.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO NET/Socket : Using [0]enp135s0:10.66.241.139<0>
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Using network Socket
+hyper-01-prod-comp-di-0241-139:40897:40897 [2] NCCL INFO Bootstrap : Using enp135s0:10.66.241.139<0>
+hyper-01-prod-comp-di-0241-139:40897:40897 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO NET/IB : No device found.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO NET/Socket : Using [0]enp135s0:10.66.241.139<0>
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Using network Socket
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Channel 00/02 :    0   1   2   3
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Channel 01/02 :    0   1   2   3
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Channel 00 : 2[a3000] -> 3[a5000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Channel 01 : 2[a3000] -> 3[a5000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Channel 00 : 3[a5000] -> 0[9f000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Channel 01 : 3[a5000] -> 0[9f000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Channel 00 : 1[a1000] -> 2[a3000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Channel 01 : 1[a1000] -> 2[a3000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Channel 00 : 0[9f000] -> 1[a1000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Channel 01 : 0[9f000] -> 1[a1000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Connected all rings
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Connected all rings
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Channel 00 : 3[a5000] -> 2[a3000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO P2P is disabled between connected GPUs 3 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Could not enable P2P between dev 3(=a5000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Channel 01 : 3[a5000] -> 2[a3000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Connected all rings
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 3. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 3(=a5000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Connected all rings
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Channel 00 : 2[a3000] -> 1[a1000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO P2P is disabled between connected GPUs 2 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Could not enable P2P between dev 2(=a3000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Could not enable P2P between dev 0(=9f000) and dev 1(=a1000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 2. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 2(=a3000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Channel 01 : 2[a3000] -> 1[a1000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Channel 00 : 1[a1000] -> 0[9f000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Could not enable P2P between dev 1(=a1000) and dev 0(=9f000)
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Channel 01 : 1[a1000] -> 0[9f000] via SHM/direct/direct
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO Connected all trees
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO Connected all trees
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO Connected all trees
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO Connected all trees
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+hyper-01-prod-comp-di-0241-139:40897:47605 [2] NCCL INFO comm 0xc5c7970 rank 2 nranks 4 cudaDev 2 busId a3000 - Init COMPLETE
+hyper-01-prod-comp-di-0241-139:40895:47599 [0] NCCL INFO comm 0xc6f3e20 rank 0 nranks 4 cudaDev 0 busId 9f000 - Init COMPLETE
+hyper-01-prod-comp-di-0241-139:40896:47601 [1] NCCL INFO comm 0xc82dae0 rank 1 nranks 4 cudaDev 1 busId a1000 - Init COMPLETE
+hyper-01-prod-comp-di-0241-139:40898:47603 [3] NCCL INFO comm 0xb1e6720 rank 3 nranks 4 cudaDev 3 busId a5000 - Init COMPLETE
+It took 10.1s
+Train Loss: 0.843
+rating_loss (1281805): 0.697 review_loss (1281807): 0.808 sequential_loss (117100): 2.883 total_loss (2914912): 0.843 traditional_loss (234200): 0.809 
+
+Skip validation for Epoch01
+Skip validation for Epoch01
+Skip validation for Epoch01
+Skip validation for Epoch01
+Train Loss: 0.797
+rating_loss (1281806): 0.655 review_loss (1281805): 0.766 sequential_loss (117101): 2.757 total_loss (2914912): 0.797 traditional_loss (234200): 0.766 
+
+Skip validation for Epoch02
+Skip validation for Epoch02Skip validation for Epoch02
+
+Skip validation for Epoch02
+Train Loss: 0.788
+rating_loss (1281806): 0.647 review_loss (1281806): 0.758 sequential_loss (117100): 2.723 total_loss (2914912): 0.788 traditional_loss (234200): 0.757 
+
+Skip validation for Epoch03
+Skip validation for Epoch03
+Skip validation for Epoch03
+Skip validation for Epoch03
+Train Loss: 0.782
+rating_loss (1281806): 0.642 review_loss (1281806): 0.752 sequential_loss (117100): 2.697 total_loss (2914912): 0.782 traditional_loss (234200): 0.752 
+
+Skip validation for Epoch04
+Skip validation for Epoch04
+Skip validation for Epoch04
+Skip validation for Epoch04
+Train Loss: 0.776
+rating_loss (1281806): 0.637 review_loss (1281806): 0.747 sequential_loss (117100): 2.671 total_loss (2914912): 0.776 traditional_loss (234200): 0.746 
+
+Skip validation for Epoch05
+Skip validation for Epoch05
+Skip validation for Epoch05
+Skip validation for Epoch05
+Train Loss: 0.769
+rating_loss (1281807): 0.631 review_loss (1281805): 0.741 sequential_loss (117100): 2.645 total_loss (2914912): 0.769 traditional_loss (234200): 0.741 
+
+Skip validation for Epoch06
+Skip validation for Epoch06
+Skip validation for Epoch06
+Skip validation for Epoch06
+Train Loss: 0.762
+rating_loss (1281806): 0.625 review_loss (1281806): 0.735 sequential_loss (117100): 2.612 total_loss (2914912): 0.762 traditional_loss (234200): 0.734 
+
+Skip validation for Epoch07Skip validation for Epoch07
+
+Skip validation for Epoch07
+Skip validation for Epoch07
+Train Loss: 0.755
+rating_loss (1281806): 0.620 review_loss (1281805): 0.728 sequential_loss (117100): 2.575 total_loss (2914912): 0.755 traditional_loss (234201): 0.727 
+
+Skip validation for Epoch08
+Skip validation for Epoch08
+Skip validation for Epoch08
+Skip validation for Epoch08
+Train Loss: 0.747
+rating_loss (1281806): 0.614 review_loss (1281805): 0.721 sequential_loss (117100): 2.533 total_loss (2914912): 0.747 traditional_loss (234201): 0.722 
+
+Skip validation for Epoch09
+Skip validation for Epoch09
+Skip validation for Epoch09
+Skip validation for Epoch09
+Train Loss: 0.741
+rating_loss (1281807): 0.610 review_loss (1281805): 0.716 sequential_loss (117100): 2.493 total_loss (2914912): 0.741 traditional_loss (234200): 0.717 
+
+Skip validation for Epoch10
+Skip validation for Epoch10
+Skip validation for Epoch10
+Skip validation for Epoch10
+hyper-01-prod-comp-di-0241-139:40897:47606 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+hyper-01-prod-comp-di-0241-139:40895:47608 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+hyper-01-prod-comp-di-0241-139:40896:47609 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+hyper-01-prod-comp-di-0241-139:40897:40897 [2] NCCL INFO comm 0xc5c7970 rank 2 nranks 4 cudaDev 2 busId a3000 - Abort COMPLETE
+hyper-01-prod-comp-di-0241-139:40895:40895 [0] NCCL INFO comm 0xc6f3e20 rank 0 nranks 4 cudaDev 0 busId 9f000 - Abort COMPLETE
+hyper-01-prod-comp-di-0241-139:40898:47607 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+hyper-01-prod-comp-di-0241-139:40896:40896 [1] NCCL INFO comm 0xc82dae0 rank 1 nranks 4 cudaDev 1 busId a1000 - Abort COMPLETE
+hyper-01-prod-comp-di-0241-139:40898:40898 [3] NCCL INFO comm 0xb1e6720 rank 3 nranks 4 cudaDev 3 busId a5000 - Abort COMPLETE
